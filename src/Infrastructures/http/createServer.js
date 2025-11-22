@@ -18,10 +18,6 @@ const createServer = async (container) => {
     }
   ])
 
-  console.log('ACCESS_TOKEN_KEY', process.env.ACCESS_TOKEN_KEY);
-  console.log('ACCESS_TOKEN_AGE', process.env.ACCESS_TOKEN_AGE);
-  console.log('REFRESH_TOKEN_KEY', process.env.REFRESH_TOKEN_KEY);
-
   server.auth.strategy('forumapi_jwt', 'jwt', {
     keys: process.env.ACCESS_TOKEN_KEY,
     verify: {
