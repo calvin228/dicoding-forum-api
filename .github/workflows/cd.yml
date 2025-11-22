@@ -8,7 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
- 
+  
+    steps: 
+    - name: 'Install Yarn and PM2'
+      run: npm install -g yarn pm2
+      
     steps:
     - name: SSH and deploy app
       uses: appleboy/ssh-action@master
